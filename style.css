@@ -7,6 +7,10 @@
     padding: 0;
 }
 
+.topnav {
+    display: none;
+}
+
 body {
     font-family: "Poppins", sans-serif;
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url("ff7_remake_key_art.jpg");
@@ -115,4 +119,99 @@ header {
     right: 42rem;
     top: 98rem;
     font-size: 20px;
+}
+
+/* Media Queries  */
+
+@media (max-width: 768px) {
+    body {
+        background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url("ff7_remake_key_art.jpg");
+    }
+
+    .call {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+    }
+
+    .main {
+        display: flex;
+        max-width: 100vw;
+        max-height: 100vh;
+    }
+
+    .paragraphs {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+        padding-top: 1rem;
+    }
+
+    .paragraphs h3 {
+        margin-top: 2rem;
+    }
+
+    #bar {
+        display: none;
+    }
+
+    .nav-bar img {
+        max-width: 200px;
+        margin-left: 9rem;
+    }
+
+    header ul a {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+    }
+
+    header ul li a:first-child {
+        padding: 1rem;
+    }
+
+    header {
+        max-width: 30vw;
+        position: relative;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+        position: relative;
+        display: block;
+    }
+
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    .topnav #myLinks {
+        display: none;
+    }
+
+    /* Style navigation menu links */
+    .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+
+    .topnav img {
+        max-width: 30px;
+    }
+
+    /* Style the hamburger menu */
+    .topnav a.icon {
+        background: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    /* Style the active link (or home/logo) */
+    .active {
+        background-color: teal;
+        color: white;
+    }
 }
